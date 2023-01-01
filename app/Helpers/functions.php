@@ -52,7 +52,7 @@ function userPhoto(User $user, $attributes = [])
  */
 function userPhotoPath($photoPath, $genderId)
 {
-    if (is_file(public_path('storage/'.$photoPath))) {
+    if (is_file($_SERVER['DOCUMENT_ROOT'].'/storage/'.$photoPath)) {
         return asset('storage/'.$photoPath);
     }
 
